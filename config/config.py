@@ -11,7 +11,7 @@ TECH_TOKEN = os.environ.get("TECH_TOKEN")
 AUTH = HTTPBasicAuth(username=TECH_USER, password=TECH_TOKEN)
 WRONG_CREDS = [
     HTTPBasicAuth(username=TECH_USER, password="wrong"),
-    HTTPBasicAuth(username="wrong", password=EVENTSTREAM_TECH_TOKEN),
+    HTTPBasicAuth(username="wrong", password=TECH_TOKEN),
     HTTPBasicAuth(username=None, password=None),
     HTTPBasicAuth(username="", password="")
 ]
